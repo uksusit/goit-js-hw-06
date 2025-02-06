@@ -5,10 +5,11 @@ const ingredients = [
   'Tomatos',
   'Herbs',
   'Condiments',
-  // "Pumpkin",
+  // 'Pumpkin',
 ];
 
-//  var.1
+//  var.1   / додає <li>  почергово
+
 //   console.log("items are ", ingredients.length);
 
 // ingredients.forEach(ingredient => {
@@ -24,48 +25,22 @@ const ingredients = [
 // console.log("item number ", listEls.querySelectorAll('li').length);
 // });
 
-// var.2
 
-// const liEl = `<li class="item">ingredient</li>`
-// listEls.insertAdjacentHTML('beforeend', li);
+// var.2     /вставить усі <li> за одну операцію у список/
 
+const list = document.querySelector('#ingredients');
 
-
-const list = document.querySelector(".ingredients");
-
-const listEls = [];
-ingredients.forEach(ingredient => {
-  console.log("ingredient: ", ingredient);
-
-console.log(listEls);
-
+const listEls = ingredients.map(ingredient => {
+  // console.log("ingredient: ", ingredient);
   const li = document.createElement('li');
   li.textContent = ingredient;
-  li.classList.add("item");
-  listEls.push(li);
+  li.classList.add('item');
   console.log("li.textContent: ", li.textContent);
-console.log("item number ", listEls.length);
+  console.log(li);
+return li;
 });
 
-console.dir(listEls);
-
-list.append([listEls]);
-
-const htmlString = `<p class="article-text">Nullam quis ante. Vestibulum dapibus nunc ac augue. In consectetuer turpis ut velit.</p>
-   <a class="link" href="#">Read more...</a>`;
-
-// Replace += with = operator. See the difference? 
-// Article title is lost because we overwrite element content.
-article.innerHTML += htmlString;
+console.log(...listEls);
+list.append(...listEls);
 
 
-
-// Adds an item to the end of the list
-// const lastItem = document.createElement("li");
-// lastItem.textContent = "Poly";
-// list.append(lastItem);
-
-// Adds an item to the beginning of the list
-// const firstItem = document.createElement("li");
-// firstItem.textContent = "Ajax";
-// list.prepend(firstItem);
