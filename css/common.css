@@ -22,3 +22,20 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 300px));
+  gap: 16px 32px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  list-style: none;
+}
+
+.img {
+  width: 100%;
+}
+/* .pic {
+grid: 5%;
+} */
