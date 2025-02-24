@@ -1,10 +1,13 @@
 const counterValue = 0;
 
-const count = document.querySelector('.button');
+// const countDec = document.querySelector('button');
+const count = document.querySelector('#counter'.childNodes);
+
 count.addEventListener('click', onClick);
 
 function onClick(evt){
-console.log(evt);
-}
+console.log(evt.currentTarget
+);
+};
 
 
