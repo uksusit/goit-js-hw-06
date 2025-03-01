@@ -10,9 +10,10 @@ console.log("before", value.textContent);
 
 function onClick(evt){
 console.dir(evt.currentTarget);
-
+console.log(evt.currentTarget);
 let val = evt.currentTarget;
-console.log(val);
+console.log(val.dataset
+);
 
 let valDigit = (+val.textContent);
 console.log("current digit", valDigit);
