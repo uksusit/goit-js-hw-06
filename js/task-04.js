@@ -5,15 +5,21 @@ const counts = document.querySelectorAll('button');
 counts.forEach(count => {    
 count.addEventListener('click', onClick);
 });
+const value = document.querySelector('#value');
+console.log("before", value.textContent);
 
 function onClick(evt){
 console.dir(evt.currentTarget);
 
 let val = evt.currentTarget;
+console.log(val);
 
+let valDigit = (+val.textContent);
+console.log("current digit", valDigit);
 
-console.log(val.);
-counterValue += 1;
-console.log(counterValue);
+counterValue += valDigit;
+console.log("after", counterValue);
+value.textContent = counterValue;
+
 };
 
