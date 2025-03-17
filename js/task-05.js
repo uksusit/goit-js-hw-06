@@ -11,3 +11,8 @@ console.log(inpt);
 
 const outpt = document.querySelector('#name-output')
 console.log(outpt);
+// outpt.textContent = ({inpt});
+
+inpt.addEventListener("input", (Event) => {
+    outpt.textContent = Event.currentTarget.value;
+});
