@@ -7,12 +7,15 @@
 
 let  inpt = document.getElementById('name-input')
 console.log(inpt);
-// console.log(inpt.textContent);
+console.dir(Event.currentTarget);
 
-const outpt = document.querySelector('#name-output')
+const outpt = document.querySelector('#name-output');
 console.log(outpt);
 // outpt.textContent = ({inpt});
 
 inpt.addEventListener("input", (Event) => {
     outpt.textContent = Event.currentTarget.value;
 });
+
+
+
