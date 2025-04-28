@@ -17,7 +17,7 @@ console.log(outpt);
 inpt.addEventListener("input", (Event) => {
     console.dir(Event.currentTarget);
     // console.log(Event());
-    if ( inpt.value != "anonymous")  // who must be?
+    if ( inpt.value != undefined )  // who must be?
     outpt.textContent = Event.currentTarget.value;
    
  else  outpt.textContent = "Anonymous";
