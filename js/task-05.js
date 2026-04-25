@@ -5,22 +5,16 @@
 //  в span#name-output. Якщо інпут порожній,
 //  у спані повинен відображатися рядок "Anonymous".
 
-let  inpt = document.getElementById('name-input')
-console.dir(inpt.currentTarget);
+const input = document.querySelector('#name-input');
+const output = document.querySelector('#name-output');
 
-
-const outpt = document.querySelector('#name-output');
-console.log(outpt);
-// outpt.textContent = ({inpt});
-
-
-inpt.addEventListener("input", (Event) => {
-    console.dir(Event.currentTarget);
-    // console.log(Event());
-    if ( inpt.value != undefined )  // who must be?
-    outpt.textContent = Event.currentTarget.value;
-   
- else  outpt.textContent = "Anonymous";
+input.addEventListener('input', (event) => {
+  const value = event.currentTarget.value.trim();
+  output.textContent = value !== '' ? value : 'Anonymous';
 });
 
 
+// Як це працює:
+// input event: Ми використовуємо саме цю подію, оскільки вона спрацьовує миттєво при кожній зміні значення (введення символу, видалення або вставка тексту).
+// trim(): Я додав цей метод, щоб пробіли на початку або в кінці не вважалися валідним ім'ям. Якщо користувач введе лише пробіли, скрипт все одно покаже "Anonymous".
+// Тернарний оператор: Це компактний спосіб перевірити: «Якщо значення не порожнє — виводь текст, інакше — повертай дефолтне значення».
