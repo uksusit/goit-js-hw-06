@@ -11,8 +11,7 @@ const createBtn = document.querySelector('[data-create]');
 const destroyBtn = document.querySelector('[data-destroy]');
 const boxesContainer = document.querySelector('#boxes');
 // Додаємо стилізацію контейнера однією строкою - розкоментувати наступний рядок:
-//
-boxesContainer.style.cssText = 'display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px; margin-top: 20px;';
+// boxesContainer.style.cssText = 'display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px; margin-top: 20px;';
 
 //  або так:
 // Оновлений рядок стилізації для максимального використання простору
